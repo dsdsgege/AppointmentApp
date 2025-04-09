@@ -1,0 +1,11 @@
+<resources>
+    <string name="appName">AppointmentApp</string>
+    <string name="email">E-mail cím</string>
+    <string name="taj">Taj-szám</string>
+    <string name="pass">Jelszó</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="registration">Regisztráció</string>
+    <string name="passAgain">Jelszó újra</string>
+    <string name="goToLog">Már van fiókom</string>
+    <string name="goToReg">Még nincs fiókom</string>
+</resources>

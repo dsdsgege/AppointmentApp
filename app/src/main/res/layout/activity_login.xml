@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="15dp"
+    android:background="@drawable/login_background"
+    tools:context=".LoginActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/icon_account_box">
+        </ImageView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/taj"
+            android:textColor="@color/yellow"
+            android:textColorHint="@color/yellow"
+            android:background="@drawable/rounded_edit_text_bg"
+            android:padding="14dp"
+            android:inputType="text"
+            android:id="@+id/logTajEditText">
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/pass"
+            android:textColor="@color/yellow"
+            android:textColorHint="@color/yellow"
+            android:background="@drawable/rounded_edit_text_bg"
+            android:padding="14dp"
+            android:inputType="textPassword"
+            android:id="@+id/logPassEditText">
+        </EditText>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/login"
+            android:textColor="@color/yellow"
+            android:backgroundTint="@color/dark"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:id="@+id/logButton"
+            android:onClick="executeLog"
+            >
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/goToReg"
+            android:textColor="@color/yellow"
+            android:backgroundTint="@color/dark"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:id="@+id/goToRegButton"
+            android:onClick="goToReg"
+            >
+        </Button>
+
+    </LinearLayout>
+</RelativeLayout>
