@@ -8,7 +8,7 @@
     android:gravity="center"
     android:padding="15dp"
     android:background="@drawable/login_background"
-    tools:context=".LoginActivity"
+    tools:context=".activites.LoginActivity"
     >
 
     <LinearLayout
@@ -24,17 +24,15 @@
         </ImageView>
 
         <EditText
+            android:id="@+id/logEmailEditText"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="@string/taj"
-            android:textColor="@color/yellow"
             android:textColorHint="@color/yellow"
-            android:background="@drawable/rounded_edit_text_bg"
+            android:textColor="@color/yellow"
             android:padding="14dp"
-            android:inputType="text"
-            android:id="@+id/logTajEditText">
-        </EditText>
+            android:background="@drawable/rounded_edit_text_bg"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -59,9 +57,20 @@
             android:padding="14dp"
             android:textSize="15sp"
             android:id="@+id/logButton"
-            android:onClick="executeLog"
+            android:onClick="executeLogButton"
             >
         </Button>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/google_icon_logo"
+            android:onClick="googleLoginButton"
+            android:clickable="true">
+
+
+        </ImageView>
 
         <Button
             android:layout_width="match_parent"

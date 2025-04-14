@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "346893851322",
+    "project_id": "appointmentapp-8fabc",
+    "storage_bucket": "appointmentapp-8fabc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346893851322:android:96234845beeff330018083",
+        "android_client_info": {
+          "package_name": "com.example.appointmentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346893851322-8sphuohq0iaq3g81vmkhladn1p2pcml2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appointmentapp",
+            "certificate_hash": "506c9a3d22b8e79bc8739ef55d7ea4697934e768"
+          }
+        },
+        {
+          "client_id": "346893851322-sdscblbv5b58g9dhm4mt7doeob0adi4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOUWl_TUdGLVnTHJgwJLnJKP63wxbocX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346893851322-sdscblbv5b58g9dhm4mt7doeob0adi4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

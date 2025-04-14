@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".RegisterActivity">
+    tools:context=".activites.RegisterActivity">
 
     <TextView
         android:id="@+id/registrationTextView"
@@ -31,7 +31,7 @@
         android:ems="10"
         android:hint="@string/taj"
         android:inputType="number"
-        android:maxLength="9"
+        android:maxLength="11"
         android:textAlignment="center"
         android:textColor="@color/yellow"
         android:textColorHint="@color/yellow"
@@ -105,7 +105,7 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:backgroundTint="@color/dark"
-            android:onClick="goToLog"
+            android:onClick="goToLogButton"
             android:text="@string/goToLog"
             android:textColor="@color/yellow" />
 
@@ -116,7 +116,7 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:backgroundTint="@color/dark"
-            android:onClick="executeReg"
+            android:onClick="executeRegButton"
             android:text="@string/registration"
             android:textColor="@color/yellow" />
     </LinearLayout>
