@@ -24,6 +24,9 @@
         <activity android:name="com.example.appointmentapp.activites.RegisterActivity">
 
         </activity>
+        <activity android:name="com.example.appointmentapp.activites.HospitalsActivity">
+
+        </activity>
     </application>
 
 </manifest>

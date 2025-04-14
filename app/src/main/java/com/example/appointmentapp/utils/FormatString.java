@@ -40,9 +40,17 @@ public class FormatString {
                 for (Character ch: digitsOnly.toString().toCharArray() ) {
                     i++;
                     stringToShow.append(ch);
-                    if(i % 3 == 0 && i < 9) {
+                    if(i == 4) {
+                        char chTemp = stringToShow.charAt(i-1);
+                        stringToShow.delete(i-1,i);
                         stringToShow.append("-");
+                        stringToShow.append(chTemp);
                     }
+                    else if(i == 7) {
+                        char chTemp = stringToShow.charAt(i-2);
+                        stringToShow.delete(i-2,i-1);
+                        stringToShow.append("-");
+                        stringToShow.append(chTemp);                    }
                 }
 
                 editText.setText(stringToShow.toString());
