@@ -1,5 +1,6 @@
 package com.example.appointmentapp.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,6 +22,8 @@ import com.example.appointmentapp.R;
 import com.example.appointmentapp.adapter.HospitalAdapter;
 import com.example.appointmentapp.dao.HospitalDAO;
 import com.example.appointmentapp.model.Hospital;
+import com.example.appointmentapp.utils.AddHospitalDialogFragment;
+import com.example.appointmentapp.utils.Dialog;
 import com.example.appointmentapp.utils.FireBase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,7 +45,7 @@ public class HospitalActivity extends AppCompatActivity {
     private int gridNumber = 1;
     private final HospitalDAO hospitalDAO = new HospitalDAO();
     private ListenerRegistration listenerRegistration;
-
+    private Context context = HospitalActivity.this;
 
     private void initDatabase() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -92,6 +95,8 @@ public class HospitalActivity extends AppCompatActivity {
                 });
 
     }
+
+    // lifecycle hook :)
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -104,7 +109,9 @@ public class HospitalActivity extends AppCompatActivity {
         initDatabase();
         setContentView(R.layout.hospital_activity);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setBackgroundColor(getColor(R.color.lightyellow));
         setSupportActionBar(toolbar);
+
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         // if there is no user logged in then
@@ -147,17 +154,35 @@ public class HospitalActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        /*switch(item.getItemId()) {
-            case R.id.doctors:
-                return true;
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
+        if(item.getItemId() == R.id.newHospital) {
+            AddHospitalDialogFragment dialog = AddHospitalDialogFragment.getInstance();
+            dialog.show(getSupportFragmentManager(), "AddHospitalDialog");
+            return true;
+        } else if(item.getItemId() == R.id.inTenDays) {
+            hospitalDAO.filterByDate(new HospitalDAO.HospitalCallback() {
+                @Override
+                public void onCallback(List<Hospital> hospitalList) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    for (var h : hospitalList) {
+                        stringBuilder.append(h.getName()).append(", ");
+                    }
+                    stringBuilder.deleteCharAt(stringBuilder.length() - 2);
+                    Dialog.createDialog(context,"A következő " + hospitalList.size() + " kórházban van 10 napon belül időpont: " + stringBuilder.toString().trim(), "Rendben").show();
+                }
 
+                @Override
+                public void onDoctorsCallback(String[] doctors) {
+
+                }
+                @Override
+                public void onDoctorCountCallback(int count) {
+
+                }
+            });
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-
-         */
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -179,6 +204,10 @@ public class HospitalActivity extends AppCompatActivity {
 
             @Override
             public void onDoctorsCallback(String[] doctors) {
+
+            }
+            @Override
+            public void onDoctorCountCallback(int count) {
 
             }
         });

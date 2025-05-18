@@ -106,11 +106,15 @@ public class HospitalAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 @Override
                 public void onClick(View view) {
                     Hospital currHospital = new Hospital();
-                    currHospital.setName(hospitalName.toString());
+                    currHospital.setName(hospitalName.getText().toString());
 
                     hospitalDAO.getDoctors(currHospital, new HospitalDAO.HospitalCallback() {
                         @Override
                         public void onCallback(List<Hospital> hospitalList) {
+
+                        }
+                        @Override
+                        public void onDoctorCountCallback(int count) {
 
                         }
 

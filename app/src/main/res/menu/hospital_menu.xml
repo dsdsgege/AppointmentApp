@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:popupTheme="@style/menuStyle">
     <item
-        android:id="@+id/doctors"
-        android:title="Doktorok"
-        app:showAsAction="ifRoom"
-        app:actionViewClass="android.widget.TextView"
+        android:id="@+id/newHospital"
+        android:title="Új kórház"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/inTenDays"
+        android:title="10 napon belül"
+        app:showAsAction="always"
         />
     <item
         android:id="@+id/search_bar"
         android:title="Keresés"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         app:actionViewClass="android.widget.SearchView"
         />
 </menu>
