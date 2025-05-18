@@ -8,4 +8,29 @@
     <string name="passAgain">Jelszó újra</string>
     <string name="goToLog">Már van fiókom</string>
     <string name="goToReg">Még nincs fiókom</string>
+
+    <string-array name="hospital_names">
+        <item>Budapesti Nagykórház</item>
+        <item>Szegedi Elmegyógyintézet</item>
+        <item>Szent Margit Kórház</item>
+        <item>Veszprém Kórház</item>
+    </string-array>
+
+    <string-array name="doctors1">
+        <item>Dr. Beviz Elek</item>
+        <item>Dr. Cserepes Virág</item>
+    </string-array>
+
+    <string-array name="doctors2">
+        <item>Dr. Wincs Eszter</item>
+        <item>Dr. Bekő Tóni</item>
+    </string-array>
+
+    <string-array name="appointments">
+        <item>2025-05-20</item>
+        <item>2025-05-22</item>
+        <item>2025-05-25</item>
+        <item>2025-05-30</item>
+    </string-array>
+
 </resources>

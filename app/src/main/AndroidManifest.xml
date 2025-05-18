@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AppointmentApp"
         tools:targetApi="31">
         <activity
-            android:name=".activites.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.appointmentapp.activites.RegisterActivity">
+        <activity android:name="com.example.appointmentapp.activity.RegisterActivity">
 
         </activity>
-        <activity android:name="com.example.appointmentapp.activites.HospitalsActivity">
+        <activity android:name="com.example.appointmentapp.activity.HospitalActivity">
+
+        </activity>
+        <activity android:name="com.example.appointmentapp.activity.BookAppActivity">
 
         </activity>
     </application>

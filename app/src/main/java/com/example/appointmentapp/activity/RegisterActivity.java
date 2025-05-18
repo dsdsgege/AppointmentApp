@@ -1,13 +1,11 @@
-package com.example.appointmentapp.activites;
+package com.example.appointmentapp.activity;
 
 
 import static com.example.appointmentapp.utils.Dialog.createDialog;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,7 +28,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ForkJoinPool;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -117,7 +114,6 @@ public class RegisterActivity extends AppCompatActivity {
                             Map<String, Object> user = new HashMap<>();
                             user.put("taj", taj);
                             user.put("email", email);
-
                             // adding the data to the db
                             // event listeners if it was successful or not
                             db.collection("user").document(userId).set(user)
@@ -126,9 +122,10 @@ public class RegisterActivity extends AppCompatActivity {
                                     })
                                     .addOnFailureListener(failure -> {
                                         Toast.makeText(RegisterActivity.this, "Nem sikerült elmenteni a taj számod", Toast.LENGTH_LONG).show();
+                                        //Log.e("FIRESTORE_ERROR", "Hiba: ", failure);
                                     });
                         }
-                        Intent hospitalIntent = new Intent(getApplicationContext(), HospitalsActivity.class);
+                        Intent hospitalIntent = new Intent(getApplicationContext(), HospitalActivity.class);
                         startActivity(hospitalIntent);
                     } else {
                         Toast.makeText(RegisterActivity.this, "A regisztráció sikertelen: " + task.getException().getMessage() ,Toast.LENGTH_LONG).show();

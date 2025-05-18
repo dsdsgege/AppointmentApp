@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/hospital_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/tvHospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kórház neve"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:id="@+id/asd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Szabad időpont: "
+            android:textSize="18sp"
+            android:textColor="@color/lightyellow"
+            android:paddingBottom="24dp" />
+        <TextView
+            android:id="@+id/tvNextAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Szabad időpont: 2025.01.01"
+            android:textSize="18sp"
+            android:textColor="@color/lightyellow"
+            android:paddingBottom="24dp" />
+
+        <TextView
+            android:id="@+id/tvDoctorsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Válassz doktort:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:textColor="@color/white"/>
+
+        <RadioGroup
+            android:id="@+id/rgDoctors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp">
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnBookAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Foglalás"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/yellow"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:onClick="bookAppointment"/>
+        <Button
+            android:id="@+id/back_to_hospital_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vissza"
+            android:onClick="goToHospitalActivity"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/yellow"
+            android:padding="12dp"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</ScrollView>

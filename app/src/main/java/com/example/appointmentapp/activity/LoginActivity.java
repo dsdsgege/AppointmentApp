@@ -1,6 +1,5 @@
-package com.example.appointmentapp.activites;
+package com.example.appointmentapp.activity;
 
-import static androidx.core.content.PackageManagerCompat.LOG_TAG;
 import static com.example.appointmentapp.utils.Dialog.createDialog;
 
 import android.content.Intent;
@@ -131,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this,"Sikeres bejelentkezés", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(LoginActivity.this,HospitalsActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, HospitalActivity.class);
                             startActivity(intent);
                             overridePendingTransition(R.anim.from_left, R.anim.from_right);
                             finish();
@@ -164,7 +163,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this,"Sikeres bejelentkezés", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(LoginActivity.this,HospitalsActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, HospitalActivity.class);
                             startActivity(intent);
                             overridePendingTransition(R.anim.from_left, R.anim.from_right);
                             finish();

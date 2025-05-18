@@ -8,7 +8,7 @@
     android:gravity="center"
     android:padding="15dp"
     android:background="@drawable/login_background"
-    tools:context=".activites.LoginActivity"
+    tools:context=".activity.LoginActivity"
     >
 
     <LinearLayout

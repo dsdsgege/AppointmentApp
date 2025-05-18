@@ -33,7 +33,12 @@ android {
 }
 
 dependencies {
-    implementation ("com.google.firebase:firebase-firestore:25.1.3")
+
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("com.github.bumptech.glide:glide:3.7.0")
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("com.google.firebase:firebase-firestore:25.1.3")
     implementation("com.google.android.gms:play-services-auth:21.3.0")
     implementation("com.google.firebase:firebase-auth:23.2.0")
     implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
