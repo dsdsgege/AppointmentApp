@@ -118,6 +118,9 @@ public class BookAppActivity extends AppCompatActivity {
             long start = startDateTime.toInstant().toEpochMilli();
             long end = endDateTime.toInstant().toEpochMilli();
 
+            // A TELEFON ALAP CALENDARJABA RAKJA AZ IDŐPONTOT, HA TÖBBET FOGLALSZ,
+            // AKKOR A LEGUTOLSÓ FOGLALÁS NAPJÁNÁL LESZ OTT CSAK!
+
             // android erőforrás
             long calendarId = getPrimaryCalendarId();
             ContentValues values = new ContentValues();
@@ -155,6 +158,9 @@ public class BookAppActivity extends AppCompatActivity {
         return 1;
     }
 
+
+    // A VIBRALAS NEM MINDEN ESZKÖZÖN MŰKÖDÖTT, DE A LOGOK A VIBRÁLÁSNAK MEGFELELŐEN FUTNAK LE,
+    // EZZEL LE TUDJÁTOK TESZTELNI, HOGY MŰKÖDIK
     public void deleteHospital(View view) {
         Log.d("tag", "meghívódik a deleteHospital");
         Hospital currentHospital = new Hospital();
